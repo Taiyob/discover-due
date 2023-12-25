@@ -1,9 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
+import Root from "../layouts/Root";
+import Error from "../pages/Error";
+import Home from "../pages/Home";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <h1 className="text-black">Hellow</h1>,
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children:[
+      {
+        path: '/',
+        element: <Home></Home>,
+      },
+    ]
   },
 ]);
 

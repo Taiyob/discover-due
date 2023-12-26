@@ -8,5 +8,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), require("preline/plugin")],
+  plugins: [
+    //require("daisyui"),
+    require("preline/plugin"),
+    require("tailwindcss-gradient"),
+  ],
 };

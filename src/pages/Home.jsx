@@ -1,6 +1,10 @@
+import Clients from "../components/Clients";
 import Feature from "../components/Feature";
+import Members from "../components/Members";
+import Membership from "../components/Membership";
 import PopularService from "../components/PopularService";
 import Slider from "../components/Slider";
+import Testimonial from "../components/Testimonial";
 
 const Home = () => {
   return (
@@ -32,6 +36,10 @@ const Home = () => {
         </div>
       </div>
       <Feature></Feature>
+      <Testimonial></Testimonial>
+      <Membership></Membership>
+      <Members></Members>
+      <Clients></Clients>
     </div>
   );
 };

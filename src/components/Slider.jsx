@@ -6,7 +6,7 @@ import {
   Navigation,
   Scrollbar,
   A11y,
-  EffectFlip
+  //EffectFlip
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -27,7 +27,7 @@ const Slider = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[Autoplay, Pagination, Navigation, Scrollbar, A11y, EffectFlip]}
+        modules={[Autoplay, Pagination, Navigation, Scrollbar, A11y]}
         navigation={true}
         //effect="fade"
         //effect="flip"

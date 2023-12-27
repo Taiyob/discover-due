@@ -78,33 +78,49 @@ const Navbar = () => {
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
             <NavLink
               to="/"
-              className={({isActive})=> isActive ? "font-medium text-blue-500 bg-purple-300 rounded p-3 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" : "font-medium text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-blue-500 bg-purple-300 rounded p-3 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  : "font-medium text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              }
               aria-current="page"
             >
               Home
             </NavLink>
             <NavLink
               to="/services"
-              className={({isActive})=> isActive ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 rounded p-3" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 rounded p-3"
+                  : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              }
             >
               Services
             </NavLink>
             <NavLink
               to="/about-us"
-              className={({isActive})=> isActive ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 rounded p-3" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 rounded p-3"
+                  : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              }
             >
               About Us
             </NavLink>
             <NavLink
               to="/blog"
-              className={({isActive})=> isActive ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 rounded p-3" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 rounded p-3"
+                  : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              }
             >
               Blog
             </NavLink>
             <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none]">
-              <button
+              <NavLink
+                to="/dashboard"
                 id="hs-mega-menu-basic-dr"
-                type="button"
                 className="flex items-center w-full text-gray-600 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 "
               >
                 Dashboard
@@ -122,7 +138,7 @@ const Navbar = () => {
                 >
                   <path d="m6 9 6 6 6-6" />
                 </svg>
-              </button>
+              </NavLink>
 
               <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5 hidden">
                 <Link
@@ -148,14 +164,22 @@ const Navbar = () => {
             {user?.email ? (
               <NavLink
                 onClick={handleLogout}
-                className={({isActive})=> isActive ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 p-3 rounded" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 p-3 rounded"
+                    : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                }
               >
                 Logout
               </NavLink>
             ) : (
               <NavLink
                 to="/login"
-                className={({isActive})=> isActive ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 p-3 rounded" : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 p-3 rounded"
+                    : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                }
               >
                 Login
               </NavLink>

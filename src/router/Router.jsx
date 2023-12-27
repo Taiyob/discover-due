@@ -12,6 +12,8 @@ import MySchedules from "../pages/MySchedules";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
+import UserProfile from "../pages/UserProfile";
+import ManageServices from "../pages/ManageServices";
 
 const Router = createBrowserRouter([
   {
@@ -54,6 +56,10 @@ const Router = createBrowserRouter([
     ),
     children: [
       {
+        index: true,
+        element: <UserProfile></UserProfile>,
+      },
+      {
         path: "/dashboard/my-services",
         element: (
           <PrivateRouter>
@@ -66,6 +72,14 @@ const Router = createBrowserRouter([
         element: (
           <PrivateRouter>
             <AddServices></AddServices>
+          </PrivateRouter>
+        ),
+      },
+      {
+        path: "/dashboard/manage-services",
+        element: (
+          <PrivateRouter>
+            <ManageServices></ManageServices>
           </PrivateRouter>
         ),
       },

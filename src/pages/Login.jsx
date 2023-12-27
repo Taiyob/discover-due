@@ -1,17 +1,19 @@
 import Lottie from "lottie-react";
 import loginAnimation from "../assets/animation/userLogin.json";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import bg from "../assets/images/bg1.jpg";
 import { useContext, useState } from "react";
 import { Authcontext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
 
+
 // bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]
 const Login = () => {
   const { login } = useContext(Authcontext);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -27,7 +29,7 @@ const Login = () => {
       // console.log(user.user.displayName);
       if (user?.user?.email) {
         toast.success("You are logging in successfully", { id: toastId });
-        navigate("/");
+        navigate(location?.state ? location?.state : "/");
       }
     } catch (err) {
       console.log(err);

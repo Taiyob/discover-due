@@ -12,7 +12,7 @@ const PrivateRouter = ({ children }) => {
   if (loader) {
     return <Lottie animationData={lottieLoader}></Lottie>;
   }
-  if (user) {
+  if (user?.email) {
     return children;
   }
   return <Navigate to="/login" state={location.pathname} replace></Navigate>;

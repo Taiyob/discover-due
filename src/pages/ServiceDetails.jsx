@@ -19,6 +19,7 @@ const ServiceDetails = () => {
     price,
     serviceArea,
     description,
+    ownerEmail,
   } = useLoaderData();
 
   const handlePurchase = async (e) => {
@@ -240,7 +241,7 @@ const ServiceDetails = () => {
                         type="email"
                         name="providerEmail"
                         readOnly
-                        defaultValue={`${ownerName}@gmail.com`}
+                        defaultValue={ownerEmail}
                         className="p-3 block w-full pl-10 drop-shadow-lg rounded-lg outline-none"
                       />
                       <span className="absolute top-1/4 left-2">

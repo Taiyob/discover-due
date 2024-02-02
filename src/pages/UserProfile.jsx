@@ -9,10 +9,6 @@ const UserProfile = () => {
           <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
             <div className="space-y-2 col-span-full lg:col-span-1">
               <p className="font-medium">Personal Inormation</p>
-              <p className="text-xs">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Adipisci fuga autem eum!
-              </p>
             </div>
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
@@ -23,7 +19,7 @@ const UserProfile = () => {
                   id="firstname"
                   type="text"
                   placeholder="First name"
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -34,7 +30,7 @@ const UserProfile = () => {
                   id="lastname"
                   type="text"
                   placeholder="Last name"
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -45,7 +41,7 @@ const UserProfile = () => {
                   id="email"
                   type="email"
                   placeholder="Email"
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full">
@@ -56,7 +52,7 @@ const UserProfile = () => {
                   id="address"
                   type="text"
                   placeholder=""
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -67,7 +63,7 @@ const UserProfile = () => {
                   id="city"
                   type="text"
                   placeholder=""
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -78,7 +74,7 @@ const UserProfile = () => {
                   id="state"
                   type="text"
                   placeholder=""
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full sm:col-span-2">
@@ -89,7 +85,7 @@ const UserProfile = () => {
                   id="zip"
                   type="text"
                   placeholder=""
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
             </div>
@@ -97,7 +93,6 @@ const UserProfile = () => {
           <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
             <div className="space-y-2 col-span-full lg:col-span-1">
               <p className="font-medium">Profile</p>
-              <p className="text-xs">Adipisci fuga autem eum!</p>
             </div>
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
@@ -108,7 +103,7 @@ const UserProfile = () => {
                   id="username"
                   type="text"
                   placeholder="Username"
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -119,7 +114,7 @@ const UserProfile = () => {
                   id="website"
                   type="text"
                   placeholder="https://"
-                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
+                  className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900 py-3 px-2"
                 />
               </div>
               <div className="col-span-full">
@@ -129,6 +124,7 @@ const UserProfile = () => {
                 <textarea
                   id="bio"
                   placeholder=""
+                  rows="6"
                   className="w-full rounded-md focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900"
                 ></textarea>
               </div>
@@ -140,7 +136,7 @@ const UserProfile = () => {
                   <img
                     src="https://source.unsplash.com/30x30/?random"
                     alt=""
-                    className="w-10 h-10 rounded-full dark:bg-gray-500 dark:bg-gray-700"
+                    className="w-10 h-10 rounded-full dark:bg-gray-500"
                   />
                   <button
                     type="button"

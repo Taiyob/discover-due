@@ -21,8 +21,8 @@ const Home = () => {
                 50% Off
               </h2>
               <div className="space-x-2 text-center py-2 lg:py-0">
-                <span>Plus free shipping! Use code:</span>
-                <span className="font-bold text-lg">MAMBA</span>
+                <span> For Membership! Use code:</span>
+                <span className="font-bold text-lg">DISCOVER</span>
               </div>
               <a
                 href="#"

@@ -13,7 +13,13 @@ const Services = () => {
   const navigate = useNavigate();
 
   if (isLoading) {
-    return <Lottie className="text-center text-xs" animationData={loadingAnimation} loop={true}></Lottie>;
+    return (
+      <Lottie
+        className="text-center text-xs"
+        animationData={loadingAnimation}
+        loop={true}
+      ></Lottie>
+    );
   }
 
   const handleDetailsClick = (id) => {
@@ -30,7 +36,7 @@ const Services = () => {
           <div className="px-4 py-4 flex gap-10 justify-between items-center">
             <div className="flex gap-3 items-center">
               <img
-                className="w-16 h-16 rounded-full bg-black/40"
+                className="w-10 h-10 rounded-full bg-black/40"
                 src={user?.photoURL}
                 alt="user"
               />
@@ -54,7 +60,11 @@ const Services = () => {
             <h2 className=" text-xl font-semibold">
               {allService?.serviceName}
             </h2>
-            <h2 className="py-1  text-sm ">{allService?.description}</h2>
+            <h2 className="py-1  text-sm ">
+              {allService?.description && allService.description.length > 100
+                ? `${allService?.description.slice(0, 100)}...`
+                : allService?.description}
+            </h2>
           </div>
 
           <div className="mt-2 px-4  flex  justify-between pb-4">

@@ -7,7 +7,7 @@ const Clients = () => {
             Trusted by Open Source, enterprise, and more than 99,000 of you
           </h2>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 lg:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 lg:gap-6">
           <div className="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800">
             <svg
               className="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-800 dark:text-gray-200"

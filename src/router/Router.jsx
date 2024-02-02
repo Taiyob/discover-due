@@ -14,6 +14,8 @@ import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
 import UserProfile from "../pages/UserProfile";
 import ManageServices from "../pages/ManageServices";
+import UpdateService from "../components/UpdateService";
+import ServiceDetails from "../pages/ServiceDetails";
 
 const Router = createBrowserRouter([
   {
@@ -28,6 +30,18 @@ const Router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
+      },
+      {
+        path: "/service/detail/:id",
+        element: (
+          <PrivateRouter>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://discoverdue.vercel.app/api/v1/edit-services/${params.id}`
+          ),
       },
       {
         path: "/about-us",
@@ -82,6 +96,20 @@ const Router = createBrowserRouter([
             <ManageServices></ManageServices>
           </PrivateRouter>
         ),
+        // loader: () =>
+        //   fetch("https://discoverdue.vercel.app/api/v1/manage-services"),
+      },
+      {
+        path: "/dashboard/manage-services/:id",
+        element: (
+          <PrivateRouter>
+            <UpdateService></UpdateService>
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://discoverdue.vercel.app/api/v1/edit-services/${params.id}`
+          ),
       },
       {
         path: "/dashboard/my-schedules",

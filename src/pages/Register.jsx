@@ -48,8 +48,8 @@ const Register = () => {
     }
     createUser(email, password)
       .then((res) => {
-        console.log(res.user);
-        const user = res.user;
+        console.log(res?.user);
+        const user = res?.user;
         updateProfile(user, {
           displayName: name,
           photoURL: photoUrl,

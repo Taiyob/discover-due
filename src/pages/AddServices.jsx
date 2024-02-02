@@ -2,13 +2,17 @@ import { useContext } from "react";
 import demoImg from "../assets/images/logo.png";
 import { Authcontext } from "../provider/AuthProvider";
 import axios from "axios";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const AddServices = () => {
   const { user } = useContext(Authcontext);
+  const navigate = useNavigate();
   const userName = user.displayName;
   const userEmail = user.email;
   const handleAddService = (e) => {
     e.preventDefault();
+    const toastId = toast.loading("Service is adding........");
     const form = e.target;
     const image = form.image.value;
     const serviceName = form.serviceName.value;
@@ -30,9 +34,14 @@ const AddServices = () => {
     axios
       .post("https://discoverdue.vercel.app/api/v1/add-services", serviceData)
       .then((res) => {
+        if(res?.data?.acknowledged === true){
+          toast.success("Service added succesfully", { id: toastId });
+          navigate("/dashboard/manage-services");
+        }
         console.log(res.data);
       })
-      .then((err) => {
+      .catch((err) => {
+        toast.error(err.message, { id: toastId });
         console.log(err.message);
       });
   };
@@ -224,6 +233,26 @@ const AddServices = () => {
                     className="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder="Service Area"
                   />
+                </div>
+              </div>
+              <div className="sm:col-span-3">
+                <div className="inline-block">
+                  <label
+                    htmlFor="af-account-type"
+                    className="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
+                  >
+                    Type
+                  </label>
+                </div>
+              </div>
+              <div className="sm:col-span-9">
+                <div className="sm:flex">
+                  <select id="af-account-type" className="py-2 px-3 pe-9 block w-full sm:w-auto border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                    <option selected>--Select type--</option>
+                    <option value='popular'>Popular</option>
+                    <option value='personal'>Personal</option>
+                    <option value='group'>Group</option>
+                  </select>
                 </div>
               </div>
               <div className="sm:col-span-3">

@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Authcontext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut } = useContext(Authcontext);
+  const [block, setBlock] = useState(false);
   const handleLogout = async () => {
     try {
       await logOut();
@@ -117,61 +118,73 @@ const Navbar = () => {
             >
               Blog
             </NavLink>
-            <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none]">
-              <NavLink
-                to="/dashboard"
-                id="hs-mega-menu-basic-dr"
-                className="flex items-center w-full text-gray-600 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 "
-              >
-                Dashboard
-                <svg
-                  className="ms-1 flex-shrink-0 w-4 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            {user?.email && (
+              <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none]">
+                <NavLink
+                  to="/dashboard"
+                  onMouseEnter={() => {
+                    setBlock(!block);
+                  }}
+                  id="hs-mega-menu-basic-dr"
+                  className="flex items-center w-full text-gray-600 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 "
                 >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </NavLink>
+                  Dashboard
+                  <svg
+                    className="ms-1 flex-shrink-0 w-4 h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </NavLink>
 
-              <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5 hidden">
-                <Link
-                  to="/dashboard/my-services"
-                  className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                >
-                  My-services
-                </Link>
-                <Link
-                  to="/dashboard/add-services"
-                  className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                >
-                  Add-services
-                </Link>
-                <Link
-                  to="/dashboard/my-schedules"
-                  className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                >
-                  My-schedules
-                </Link>
+                <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5 hidden">
+                  <Link
+                    to="/dashboard/my-services"
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    My-services
+                  </Link>
+                  <Link
+                    to="/dashboard/add-services"
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    Add-services
+                  </Link>
+                  <Link
+                    to="/dashboard/my-schedules"
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    My-schedules
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
             {user?.email ? (
-              <NavLink
-                onClick={handleLogout}
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 p-3 rounded"
-                    : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                }
-              >
-                Logout
-              </NavLink>
+              <>
+                <NavLink
+                  onClick={handleLogout}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium text-blue-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 bg-purple-300 p-3 rounded"
+                      : "font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  }
+                >
+                  Logout
+                </NavLink>
+                <div className="avatar">
+                  <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img className="rounded-full" src={user?.photoURL} />
+                  </div>
+                </div>
+              </>
             ) : (
               <NavLink
                 to="/login"

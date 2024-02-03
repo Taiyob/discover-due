@@ -1,21 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 w-full">
       <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           <div className="col-span-full lg:col-span-1">
-            <a
+            <Link
+              to="/"
               className="flex-none text-xl font-semibold text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
               aria-label="Brand"
             >
-              Brand
-            </a>
+              <img src={logo} alt="" className="h-50 w-50 rounded-full" />
+            </Link>
           </div>
 
           <div className="col-span-1">
-            <h4 className="font-semibold text-gray-100">Product</h4>
+            <h4 className="font-semibold text-gray-100">Service</h4>
 
             <div className="mt-3 grid space-y-3">
               <p>
@@ -31,7 +34,7 @@ const Footer = () => {
                   className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   href="#"
                 >
-                  Changelog
+                  Guideline
                 </a>
               </p>
               <p>
@@ -111,9 +114,9 @@ const Footer = () => {
                   Subscribe
                 </a>
               </div>
-              <p className="mt-3 text-sm text-gray-400">
+              {/* <p className="mt-3 text-sm text-gray-400">
                 New UI kits or big discounts. Never spam.
-              </p>
+              </p> */}
             </form>
           </div>
         </div>
@@ -121,7 +124,7 @@ const Footer = () => {
         <div className="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
           <div className="flex justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2022 Preline. All rights reserved.
+              © 2024 DISCOVERDUE. All rights reserved.
             </p>
           </div>
           <div>

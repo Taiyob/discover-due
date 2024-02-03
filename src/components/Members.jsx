@@ -8,9 +8,7 @@ const Members = () => {
               Meet our team
             </h3>
             <p className="max-w-2xl dark:text-gray-400">
-              At a assumenda quas cum earum ut itaque commodi saepe rem
-              aspernatur quam natus quis nihil quod, hic explicabo doloribus
-              magnam neque, exercitationem eius sunt!
+            Discover our exceptional team – talented, committed, and passionate. Together, we shape success and create memorable experiences
             </p>
           </div>
           <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -22,7 +20,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Tour Guide</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -80,7 +78,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Exploration Expert</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -138,7 +136,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Adventure Architect</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -196,7 +194,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Tour Guide</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -254,7 +252,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Global Guide</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -312,7 +310,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Exploration Expert</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -370,7 +368,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">Tour Instructor</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"
@@ -428,7 +426,7 @@ const Members = () => {
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
-                <p className="text-sm dark:text-gray-400">Web developer</p>
+                <p className="text-sm dark:text-gray-400">CEO, DISCOVERDUE</p>
                 <div className="flex mt-2 space-x-2">
                   <a
                     rel="noopener noreferrer"

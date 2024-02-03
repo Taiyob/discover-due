@@ -20,9 +20,7 @@ const Testimonial = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                Choosing this travel service has been a game-changer for my vacation experiences. From seamless flight bookings to comfortable accommodation arrangements, every aspect of my journey has been handled with utmost professionalism. 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -38,7 +36,7 @@ const Testimonial = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?1"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500"
               />
               <p className="text-xl font-semibold leadi">Distinctio Animi</p>
               <p className="text-sm uppercase">Aliquam illum</p>
@@ -56,9 +54,7 @@ const Testimonial = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                I can not express enough how this travel service has elevated my travel game. The user-friendly platform makes booking flights and hotels a breeze. What sets them apart is the personalized touch they bring to each itinerary. 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -74,7 +70,7 @@ const Testimonial = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?2"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500"
               />
               <p className="text-xl font-semibold leadi">Distinctio Animi</p>
               <p className="text-sm uppercase">Aliquam illum</p>
@@ -92,9 +88,7 @@ const Testimonial = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                As a frequent traveler, I have tried various travel services, but none compare to the excellence provided by this platform. The ease of booking, coupled with a wide array of destination options, has made planning my getaways stress-free.
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -110,7 +104,7 @@ const Testimonial = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?3"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500"
               />
               <p className="text-xl font-semibold leadi">Distinctio Animi</p>
               <p className="text-sm uppercase">Aliquam illum</p>
@@ -128,9 +122,7 @@ const Testimonial = () => {
                   <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                   <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                 </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
+                My travel adventures have reached new heights since discovering this exceptional travel service. The well-designed interface makes it simple to plan and book trips tailored to my preferences.
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -146,7 +138,7 @@ const Testimonial = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?4"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500"
               />
               <p className="text-xl font-semibold leadi">Distinctio Animi</p>
               <p className="text-sm uppercase">Aliquam illum</p>

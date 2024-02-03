@@ -16,7 +16,7 @@ const PopularService = () => {
 
     return (
       <div className="max-w-[85rem] w-full mx-auto">
-        <h1 className="text-center py-10 text-5xl text-red-400 font-bold">
+        <h1 className="text-center py-10 text-5xl text-black font-bold">
           Popular Service
         </h1>
         <div className="grid grid-cols-2 gap-10">
